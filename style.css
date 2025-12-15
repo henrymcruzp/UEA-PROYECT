@@ -1,0 +1,452 @@
+/* Explorer Team Travel - Colores: Verde Claro (#90EE90) y Azul Marino (#000080) */
+
+/* RESET Y ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding-bottom: 20px;
+}
+
+/* HEADER - Azul Marino */
+header {
+    background: linear-gradient(to right, #000080, #1a1a8d);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.2);
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header-content .tagline {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.header-content i {
+    color: #90EE90;
+    margin-right: 10px;
+}
+
+/* NAVEGACIÓN - Verde Claro */
+nav {
+    background-color: #90EE90;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(144, 238, 144, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: #000080;
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 0 5px;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link:hover {
+    background-color: #000080;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* SECCIONES GENERALES */
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #000080;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #90EE90;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    color: #000080;
+    font-size: 1.5rem;
+    margin: 20px 0 15px 0;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(135deg, #f8fff8 0%, #e6f7ff 100%);
+    border-left: 5px solid #90EE90;
+}
+
+.highlight-box {
+    background-color: #f0fff0;
+    border: 2px solid #90EE90;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* DESTINOS */
+.destinos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.destino-card {
+    background-color: #f8fff8;
+    border: 2px solid #90EE90;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.destino-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(144, 238, 144, 0.3);
+}
+
+.destino-card h3 {
+    color: #000080;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.destino-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.destino-card li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.destino-card i {
+    color: #000080;
+    width: 20px;
+}
+
+/* IMAGEN Y VIDEO */
+.image-container {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    border: 4px solid #90EE90;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+.video-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.promo-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 4px solid #000080;
+}
+
+/* TABLA */
+.expeditions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.expeditions-table th {
+    background-color: #000080;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.expeditions-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.expeditions-table tr:hover {
+    background-color: #f0fff0;
+}
+
+.expeditions-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* LISTA ORDENADA */
+.process-container {
+    background-color: #f0fff0;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.process-list {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.process-list li {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+/* CAJAS DE INFORMACIÓN */
+.info-box {
+    background-color: #e6f7ff;
+    border-left: 4px solid #000080;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.external-link {
+    background-color: #f8fff8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.external {
+    color: #000080;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.external:hover {
+    text-decoration: underline;
+    color: #90EE90;
+}
+
+/* FORMULARIO */
+.contact-form {
+    background-color: #f8fff8;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #90EE90;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #000080;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #000080;
+    outline: none;
+}
+
+.experience-level {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.experience-level label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #000080, #1a1a8d);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #90EE90, #000080);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 128, 0.3);
+}
+
+/* FOOTER */
+footer {
+    background-color: #000080;
+    color: white;
+    padding: 40px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #90EE90;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    background-color: rgba(144, 238, 144, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #90EE90;
+    color: #000080;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(144, 238, 144, 0.3);
+    color: #90EE90;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        margin: 5px 0;
+        width: 200px;
+        justify-content: center;
+    }
+    
+    .destinos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-level {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
