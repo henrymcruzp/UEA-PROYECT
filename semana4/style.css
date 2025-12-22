@@ -1,0 +1,414 @@
+/* Explorer Team Travel - Bootstrap 5 Personalización */
+
+/* VARIABLES CSS */
+:root {
+    --primary-navy: #000080;
+    --primary-green: #90EE90;
+    --secondary-navy: #1a1a8d;
+    --secondary-green: #a8f0a8;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+}
+
+/* RESET Y ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    min-height: 100vh;
+}
+
+/* HEADER CON GRADIENTE */
+.header-bg {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #1a237e 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(144,238,144,0.1)"/></svg>');
+    background-size: cover;
+}
+
+.header-bg h1 {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.tagline {
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+    font-style: italic;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* NAVEGACIÓN PERSONALIZADA */
+.navbar-custom {
+    background-color: var(--primary-green) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 128, 0.15);
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--primary-navy) !important;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    border-radius: 25px;
+    margin: 0 5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar-custom .navbar-nav .nav-link:hover,
+.navbar-custom .navbar-nav .nav-link.active {
+    background-color: var(--primary-navy) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 128, 0.2);
+}
+
+.navbar-toggler {
+    border-color: var(--primary-navy) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 128, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* SECCIONES Y TÍTULOS */
+section {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.section-title {
+    color: var(--primary-navy);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-green), var(--primary-navy));
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    animation: slideIn 1s ease-out;
+}
+
+/* CARDS CON ANIMACIONES */
+.card {
+    border: none !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.shadow-hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.shadow-hover:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.destino-card {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border: 2px solid var(--primary-green) !important;
+    border-radius: 12px !important;
+}
+
+.destino-card ul li {
+    transition: transform 0.3s ease;
+}
+
+.destino-card:hover ul li {
+    transform: translateX(5px);
+}
+
+/* IMAGEN PRINCIPAL */
+.main-image {
+    border: 4px solid var(--primary-green);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-image:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* TABLA PERSONALIZADA */
+.expeditions-table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.expeditions-table thead {
+    background: linear-gradient(135deg, var(--primary-navy), #1a237e);
+}
+
+.expeditions-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.expeditions-table tbody tr:hover {
+    background-color: rgba(144, 238, 144, 0.1) !important;
+    transform: translateX(5px);
+}
+
+/* BOTONES PERSONALIZADOS */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-navy), var(--secondary-navy)) !important;
+    border: none !important;
+    padding: 12px 30px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 128, 0.2) !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--secondary-navy), var(--primary-navy)) !important;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 128, 0.3) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-navy) !important;
+    border-color: var(--primary-navy) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-navy) !important;
+    color: white !important;
+}
+
+.submit-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+/* FORMULARIO */
+.contact-form .form-control,
+.contact-form .form-select {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    border-color: var(--primary-navy);
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 128, 0.15);
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+.footer-bg {
+    background: linear-gradient(135deg, var(--primary-navy) 0%, #1a237e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,100 L100,0 L100,100 Z" fill="rgba(144,238,144,0.1)"/></svg>');
+    background-size: cover;
+}
+
+.footer-bg .row > div {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(144, 238, 144, 0.3) !important;
+}
+
+.social-icons .btn {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icons .btn:hover {
+    transform: translateY(-3px) rotate(360deg);
+    background-color: var(--primary-green) !important;
+    color: var(--primary-navy) !important;
+}
+
+/* BORDES PERSONALIZADOS */
+.border-start-primary {
+    border-left: 4px solid var(--primary-navy) !important;
+}
+
+/* ANIMACIONES CSS3 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80px;
+    }
+}
+
+/* MEDIA QUERIES PERSONALIZADAS */
+@media (max-width: 768px) {
+    .header-bg h1 {
+        font-size: 2rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .destino-card {
+        margin-bottom: 20px;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    
+    .main-image {
+        max-height: 300px;
+    }
+}
+
+/* Efectos de hover adicionales */
+.highlight-box:hover,
+.info-box:hover,
+.external-link:hover {
+    transform: translateX(10px);
+    transition: transform 0.3s ease;
+}
+
+/* Personalización de badges */
+.badge {
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+/* Efecto de carga para imágenes */
+img {
+    opacity: 0;
+    animation: imageFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes imageFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Estilos para imágenes en cards */
+.card-img-top {
+    border-bottom: 3px solid var(--primary-green);
+}
