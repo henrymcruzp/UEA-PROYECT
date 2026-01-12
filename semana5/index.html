@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Interactiva - Semana 5</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-images"></i> Galería Interactiva</h1>
+            <p class="subtitle">Agrega imágenes desde cualquier URL de internet</p>
+        </header>
+
+        <!-- Controles principales -->
+        <section class="controls-section">
+            <div class="input-group">
+                <div class="input-container">
+                    <label for="image-url">
+                        <i class="fas fa-link"></i> URL de la imagen:
+                    </label>
+                    <input type="url" 
+                           id="image-url" 
+                           placeholder="https://ejemplo.com/imagen.jpg"
+                           autocomplete="off">
+                    <div class="input-actions">
+                        <button id="add-btn" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Agregar
+                        </button>
+                        <button id="clear-btn" class="btn btn-secondary">
+                            <i class="fas fa-broom"></i> Limpiar
+                        </button>
+                    </div>
+                </div>
+                <div class="error-message" id="error-message"></div>
+                <p class="input-hint">Puedes usar cualquier URL de imagen pública de internet (JPG, PNG, GIF, WebP)</p>
+            </div>
+
+            <div class="actions-group">
+                <button id="delete-btn" class="btn btn-danger" disabled>
+                    <i class="fas fa-trash"></i> Eliminar Seleccionada
+                </button>
+                <button id="sample-btn" class="btn btn-info">
+                    <i class="fas fa-magic"></i> Ejemplos
+                </button>
+                <button id="deselect-btn" class="btn btn-warning">
+                    <i class="fas fa-times"></i> Deseleccionar
+                </button>
+            </div>
+
+            <!-- Ejemplos de URLs -->
+            <div class="examples">
+                <h3><i class="fas fa-lightbulb"></i> Prueba con estas URLs:</h3>
+                <div class="example-links">
+                    <a href="#" class="example-link" data-url="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500">Montañas</a>
+                    <a href="#" class="example-link" data-url="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500">Cielo estrellado</a>
+                    <a href="#" class="example-link" data-url="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500">Montaña nevada</a>
+                    <a href="#" class="example-link" data-url="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=500">Lago</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estadísticas -->
+        <section class="stats-section">
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Imágenes:</span>
+                    <span class="stat-value" id="total-images">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Seleccionada:</span>
+                    <span class="stat-value" id="selected-status">Ninguna</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Atajos:</span>
+                    <span class="shortcuts">
+                        <kbd>Enter</kbd> <kbd>Del</kbd> <kbd>Esc</kbd>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section class="gallery-section">
+            <h2><i class="fas fa-th"></i> Galería</h2>
+            <div id="gallery" class="gallery">
+                <!-- Las imágenes se agregarán aquí dinámicamente -->
+                <div class="empty-state">
+                    <i class="fas fa-image"></i>
+                    <h3>Galería Vacía</h3>
+                    <p>Agrega tu primera imagen usando una URL de internet</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Galería Interactiva - Semana 5 | Manipulación del DOM con JavaScript</p>
+            <p class="footer-info">
+                <i class="fas fa-info-circle"></i>
+                Todas las imágenes se cargan directamente desde sus URLs originales
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
