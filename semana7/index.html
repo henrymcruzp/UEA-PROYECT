@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andes Travel - Gestión de Paquetes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <h1>✈️ Andes Travel</h1>
+            <p>Sistema de Gestión de Paquetes Turísticos</p>
+        </header>
+
+        <section class="formulario-box">
+            <h2>Registrar Nuevo Destino</h2>
+            <form id="form-paquetes">
+                <div class="grupo-input">
+                    <label>Nombre del Paquete:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Tour Galápagos" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label>Precio ($):</label>
+                    <input type="number" id="precio" placeholder="0.00" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label>Descripción:</label>
+                    <input type="text" id="descripcion" placeholder="Detalles del viaje..." required>
+                </div>
+
+                <button type="submit" id="btn-agregar">Agregar al Catálogo</button>
+            </form>
+        </section>
+
+        <section class="lista-box">
+            <h2>Catálogo Actual</h2>
+            <ul id="lista-productos"></ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
